@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce Yourself</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+            color: #fdfdfd;
+        }
+
+        #subtitle, .contents {
+            font-size: 1.5rem;
+            font-weight: 200;
+            font-variant: normal;
+        }
+
+        #subtitle {
+            font-weight: 100;
+        }
+
+        .contents, .dark-color, #content-summary > b {
+            font-size: 1.1rem;
+            line-height: 1.2;
+            font-variant: normal;
+        }
+
+        #subtitle, .contents, #ngl-btn p > a, .dark-color {
+            word-spacing: 5%;
+        }
+
+        #content-summary {
+            column-count: 2;
+            grid-area: infos;
+        }
+
+        #ngl-btn {
+            height: 3rem;
+            width: 10rem;
+            background-color: #020202;
+            border: 2px solid #585858;
+            border-radius: 20px;
+            grid-area: message;
+            display: flex;
+            justify-content: center;
+        }
+
+        #ngl-btn p > a {
+            font-variant: normal;
+            text-decoration: none;
+        }
+
+        #ngl-btn p > a:hover {
+            color: #585858;
+        }
+
+        #ngl-btn > p {
+            align-self: center;
+        }
+
+        body {
+            max-width: 100wh;
+            max-height: 100vh;
+            background-color: #131313;
+            overflow: auto;
+        }
+
+        .container {
+            height: auto;
+            width: auto;
+            position: relative;
+            padding: 7rem 5rem 5rem 5rem;
+            
+        }
+
+        .inline-container {
+            /* border: 1px solid white; */
+            height: auto;
+            width: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 5% 50% 30% 5% 5%;
+            grid-template-areas: 
+            "title title"
+            "profile body"
+            "infos infos"
+            "message sticker"
+            "contacts contacts"; 
+        }
+
+        .dark-color {
+            color: #77779c;
+        }
+
+        .profile-section {
+            grid-area: profile;
+            border-radius: 50%;
+        }
+
+        .info-section {
+            grid-area: body;
+        }
+
+        .content-section {
+            height: 80%;
+            width: auto;
+            margin: 2rem 0;
+            overflow-y: scroll;
+        }
+
+        .content-section::-webkit-scrollbar, body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .profile-section > img {
+            object-fit: contain;
+            height: 90%;
+            width: auto;
+            border-radius: 100%;
+            margin: 5rem 0 0 7rem;
+            outline-color: #6C3BA2;
+            outline-style: solid;
+            outline-width: 4px;
+            outline-offset: .5rem;
+        }
+        
+        .contact-section {
+            grid-area: contacts;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            column-gap: 2rem;
+            align-items: center;
+            margin-top: -2rem;
+        }
+
+        #sticker {
+            grid-area: sticker;
+            
+        }
+
+        #sticker a {
+            height: 1rem;
+        }
+
+        .contact-section a {
+            text-decoration: none;
+            
+        }
+
+        .contact-section .contacts ul > li > a > i:hover, #top i:hover {
+            color: #303030;
+        }
+
+        .contact-section h2 {
+            flex-basis: 20%;
+        }
+
+        .contacts {
+            flex-grow: 1;
+            margin-top: .5rem;
+            
+        }
+
+        .contacts ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 2.5rem;
+        }
+
+        .contacts ul li {
+            margin-right: 3rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container" id="top">
+        <div class="inline-container">
+            <div class="title-section">
+                <h1 id="title">
+                    Introduce Yourself
+                </h1>
+                <p id="subtitle" class="dark-color">
+                    What to know about me
+                </p>
+            </div>
+            <div class="profile-section">
+                <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/291775085_1058530121691218_5853825727062720000_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeESBrq2N8NNi3hcbiF6V5nGvJlo6VTLckO8mWjpVMtyQxF7scanXIMjkwOFIzKqMlM9OHCsc6o8lh0H_v0KLb3R&_nc_ohc=RnJJ9ldm_AcAX_vbg2g&_nc_ht=scontent-hkg4-1.xx&oh=00_AT8MPdnjEnmJQwXPQvYDy2UllTTxb2LShEzSVqHl6eT5gg&oe=632C4CAF" alt="Profile Picture" id="profile">
+            </div>
+            <div class="info-section">
+                <h2 id="hook">
+                    Hello, My name is John Ray Ben Dela Rama
+                </h2>
+                <div class="content-section">
+                    <p class="contents dark-color" >
+                        Hi, You can call me Raven, 19 years old. 2nd year student of Associate in Computer Technology at La Verdad Christian College in Apalit Pampanga.
+                    </p>
+                    <br>
+                    <p class="contents dark-color">
+                        I am currently living in Larlin Village near LVCC and ADD convention center together with my classmates, but I was originally from Laoag City, Ilocos Norte where my family lives.
+                    </p>
+                    <br>
+                    <p class="contents dark-color">
+                        During the pandemic, I studied the rest of my 1st year through online classes using video conferencing platforms and other technologies. It was difficult to adapt to the new normal setup, but I've learned tons of new things that made me what I am today. Although, it wasn't as good as face to face meetings. I've still got to know some new people and spend my time with them.
+                    </p>
+                    <br>
+                    <p class="contents dark-color">
+                        To know more about me, I'm an introverted person with a small circle of friends, I love spending my time with them doing the things that relate us all. I also love to draw some portraits, and I sing while listening to my music tastes. I also love to read mangas, manhwas and watch movies and series on netflix.
+                    </p>
+                    <br>
+                    <p class="contents dark-color">
+                        That's all what everyone should know about me, thank you for reading!
+                    </p>
+                    <br>
+                </div>
+                <br>
+                <p id="content-summary">
+                    <b>Name:</b> <span class="dark-color">John Ray Ben Dela Rama</span>
+                    <br>
+                    <b>Date of birth:</b> <span class="dark-color">03-04-2003</span>
+                    <br>
+                    <b>Address:</b> <span class="dark-color">Blk. 7 Lt. 2 3rd Avenue Avelino B, Sampaloc Apalit Pampanga</span>
+                    <br>
+                    <b>School:</b> <span class="dark-color">La Verdad Christian College</span>
+                    <br>
+                    <b>Course:</b> <span class="dark-color">Associate in Computer Technology</span>
+                    <br>
+                    <b>College Level:</b> <span class="dark-color">2nd Year</span>
+                </p>
+                <br>
+                <div id="ngl-btn">
+                    <p>
+                        <a href="https://ngl.link/rrraaveennn" target="_blank">
+                            Send a Message
+                        </a>
+                    </p>
+                </div>
+                <iframe id="sticker" src="https://giphy.com/embed/HT0rYQ50vBYCAvbDXc" width="125" height="45" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/happy-smile-smiley-HT0rYQ50vBYCAvbDXc"></a></p>
+                
+            </div>
+            <div class="contact-section">
+                <h2>
+                    Contacts
+                </h2>
+                <div class="contacts">
+                    <ul>
+                        <li><a href="https://www.facebook.com/raven.delarama.5" id="facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/rrraaveennn" id="instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" id="youtube">
+                                <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        </li>   
+                        <li>
+                            <a href="" id="pinterest">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Raven2510" id="github">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="back-to-top">
+            <a href="#top">
+                <i class="fa-solid fa-arrow-up-long"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- colors
+    light theme - #585858
+    dark theme - #131313
+    white - #fdfdfd
+    black - #020202
+    text dark theme - #303030
+    -->
