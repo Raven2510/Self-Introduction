@@ -183,9 +183,57 @@
         .contacts ul li {
             margin-right: 3rem;
         }
+
+
+
+        .contacts ul > li:hover {
+            animation: .5s 1 infinite icon-scale;
+        }
+
+        @keyframes icon-scale {
+            from {
+                transform: scale(1.5);
+            }
+            to {
+                transform: scale(2);
+            }
+        }
         
         #ngl-btn:hover {
             border-color: #6C3BA2;
+        }
+        
+        #yt-btn {
+            border-radius: 20px;
+            height: 3rem;
+            width: 13rem;
+            background-color: #020202;
+            border: 2px solid #585858;
+            display: flex;
+            justify-content: center;
+        }
+
+        #yt-btn > p {
+            align-self: center;
+            
+        }
+
+        #yt-btn p > a {
+            text-decoration: none;
+        }
+
+        #yt-btn:hover {
+            border-color: #6C3BA2;
+        }
+
+        #yt-btn p > a:hover {
+            color: #585858;
+        }
+
+        .button-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -203,7 +251,7 @@
             </div>
             <div class="profile-section">
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                    <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/291775085_1058530121691218_5853825727062720000_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeESBrq2N8NNi3hcbiF6V5nGvJlo6VTLckO8mWjpVMtyQxF7scanXIMjkwOFIzKqMlM9OHCsc6o8lh0H_v0KLb3R&_nc_ohc=RnJJ9ldm_AcAX_vbg2g&_nc_ht=scontent-hkg4-1.xx&oh=00_AT8MPdnjEnmJQwXPQvYDy2UllTTxb2LShEzSVqHl6eT5gg&oe=632C4CAF" alt="Profile Picture" id="profile">
+                    <img src="profile.jpg" alt="Profile Picture" id="profile">
                 </a>
             </div>
             <div class="info-section">
@@ -247,16 +295,25 @@
                     <b>College Level:</b> <span class="dark-color">2nd Year</span>
                 </p>
                 <br>
-                <div id="ngl-btn">
-                    <p>
-                        <a href="https://ngl.link/rrraaveennn" target="_blank">
-                            Send a Message
-                        </a>
-                    </p>
+                <div class="button-section">
+                    <div id="ngl-btn">
+                        <p>
+                            <a href="https://ngl.link/rrraaveennn" target="_blank">
+                                Send a Message
+                            </a>
+                        </p>
+                    </div>
+                    <div id="yt-btn">
+                        <p>
+                            <a href="https://youtu.be/Oy0wBu3V-5U" target="_blank">
+                                Introduction Video
+                            </a>
+                        </p>
+                    </div>
+                    <iframe id="sticker" src="https://giphy.com/embed/HT0rYQ50vBYCAvbDXc" width="125" height="45" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/happy-smile-smiley-HT0rYQ50vBYCAvbDXc"></a></p>
                 </div>
-                <iframe id="sticker" src="https://giphy.com/embed/HT0rYQ50vBYCAvbDXc" width="125" height="45" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/happy-smile-smiley-HT0rYQ50vBYCAvbDXc"></a></p>
-                
             </div>
+            
             <div class="contact-section">
                 <h2>
                     Contacts
@@ -302,3 +359,5 @@
     black - #020202
     text dark theme - #303030
     -->
+
+    <!-- https://lms.laverdad.edu.ph/ -->
